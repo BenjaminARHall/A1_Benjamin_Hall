@@ -12,9 +12,11 @@ public class Hero : MonoBehaviour
     // Ship status information
     public float shieldLevel = 1;
     public bool ____________________________;
+    public Bounds bounds;
     void Awake()
     {
         S = this; // Sets the Singleton
+        bounds = Utils.CombineBoundsOfChildren(this.gameObject);
     }
     void Update()
     {
