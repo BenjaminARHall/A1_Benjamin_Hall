@@ -62,15 +62,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb74076bee3654540bb00cae8f663c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 2
   fireRate: 0.3
-  health: 10
+  health: 5
   score: 100
-  ________________: 0
+  showDamageForFrame: 2
+  powerUpDropChance: 1
+  _________________: 0
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   boundsCenterOffset: {x: 0, y: 0, z: 0}
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
 --- !u!1 &7168154038992425610
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,12 +11,7 @@ public enum BoundsTest
 
 public class Utils : MonoBehaviour
 {
-    void Awake()
-    {
-        Screen.orientation = ScreenOrientation.Portrait;
-        Screen.SetResolution(1080, 810, false);
-
-    }
+   
     public static Bounds BoundsUnion(Bounds b0, Bounds b1)
     {
         //Sets the bounds of the game so that the player ship does not fly outside it.

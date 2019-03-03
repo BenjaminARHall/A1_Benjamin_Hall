@@ -248,23 +248,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6defb689574d5624091bd524d3143628, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   fireRate: 0.3
   health: 10
   score: 100
-  showDamageForFrames: 2
+  showDamageForFrame: 2
   powerUpDropChance: 1
-  ________________: 0
-  originalColors: []
-  materials: []
-  remainingDamageFrames: 0
+  _________________: 0
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   boundsCenterOffset: {x: 0, y: 0, z: 0}
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
   points: []
   timeStart: 0
-  duration: 4
   parts:
   - name: Cockpit
     health: 10
@@ -289,6 +288,7 @@ MonoBehaviour:
     protectedBy: []
     go: {fileID: 0}
     mat: {fileID: 0}
+  duration: 4
 --- !u!1 &4823256409564704549
 GameObject:
   m_ObjectHideFlags: 0

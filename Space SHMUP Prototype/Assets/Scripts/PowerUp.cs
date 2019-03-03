@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
+    
     // This is an unusual but handy use of Vector2s. x holds a min value
-    // and y a max value for a Random.Range() that will be called later
+ // and y a max value for a Random.Range() that will be called later
     public Vector2 rotMinMax = new Vector2(15, 90);
     public Vector2 driftMinMax = new Vector2(.25f, 2);
     public float lifeTime = 6f; // Seconds the PowerUp exists
@@ -89,7 +90,7 @@ public class PowerUp : MonoBehaviour
         // This function is called by the Hero class when a PowerUp is collected
         // We could tween into the target and shrink in size,
         // but for now, just destroy this.gameObject
-        Destroy(this.gameObject);
+        Object.Destroy(gameObject);
     }
     void CheckOffscreen()
     {
@@ -98,7 +99,7 @@ public class PowerUp : MonoBehaviour
         BoundsTest.offScreen) != Vector3.zero)
         {
             // ...then destroy this GameObject
-            Destroy(this.gameObject);
+            Object.Destroy(gameObject);
         }
     }
 }

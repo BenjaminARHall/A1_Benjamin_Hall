@@ -46,7 +46,7 @@ public class Enemy_2 : Enemy
         if (u > 1)
         {
             // This Enemy_2 has finished its life
-            Destroy(this.gameObject);
+            Object.Destroy(this.gameObject);
             return;
         }
         // Adjust u by adding an easing curve based on a Sine wave

@@ -244,20 +244,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12472b7c295927546957587c387dfaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 7
   fireRate: 0.3
-  health: 10
+  health: 6
   score: 100
-  showDamageForFrames: 2
+  showDamageForFrame: 2
   powerUpDropChance: 1
-  ________________: 0
-  originalColors: []
-  materials: []
-  remainingDamageFrames: 0
+  _________________: 0
   bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   boundsCenterOffset: {x: 0, y: 0, z: 0}
+  originalColors: []
+  materials: []
+  remainingDamageFrames: 0
   waveFrequency: 2
   waveWidth: 4
   waveRotY: 45

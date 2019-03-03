@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5828468642941089939}
   - component: {fileID: 5828468642941089938}
   - component: {fileID: 5828468642941089941}
+  - component: {fileID: 6843873425740969385}
   m_Layer: 13
   m_Name: PowerUp
   m_TagString: PowerUp
@@ -107,8 +108,30 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!114 &6843873425740969385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5828468642941089937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc16d01931438c94bb34c63e396b0757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotMinMax: {x: 15, y: 90}
+  driftMinMax: {x: 0.25, y: 2}
+  lifeTime: 6
+  fadeTime: 4
+  ________________: 0
+  type: 0
+  cube: {fileID: 0}
+  letter: {fileID: 0}
+  rotPerSecond: {x: 0, y: 0, z: 0}
+  birthTime: 0
 --- !u!1 &5828468644139080564
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +146,7 @@ GameObject:
   - component: {fileID: 5828468644139080566}
   m_Layer: 13
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -610,8 +610,8 @@ MonoBehaviour:
   - {fileID: 3495531489172760464, guid: 444019bec7d4caf4c9e35c3a0cddb9cc, type: 3}
   - {fileID: 4877855526142139227, guid: fbf0413f2407f1346acfe6b3bbf271e4, type: 3}
   - {fileID: 4823256409304193421, guid: 6d865f81599bd204591f00cab59431dc, type: 3}
-  enemySpawnPerSecond: 0.5
-  enemySpawnPadding: 1.5
+  enemySpawnPerSecond: 0.3
+  enemySpawnPadding: 5
   weaponDefinitions:
   - type: 1
     letter: B
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   speed: 25
   rollMult: -35
   pitchMult: 20
-  _shieldLevel: 1
+  _shieldLevel: 4
   weapons:
   - {fileID: 663940087}
   - {fileID: 379354830}
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationsPerSecond: 0.1
   ________________: 0
-  levelShown: 0
+  levelShown: 4
 --- !u!1 &2084342842
 GameObject:
   m_ObjectHideFlags: 0
