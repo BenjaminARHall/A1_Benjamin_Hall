@@ -7,6 +7,7 @@ public class Hero : MonoBehaviour
    
     static public Hero S; // Singleton
                           // These fields control the movement of the ship
+    public float gameRestartDelay = 2f;
     public float speed = 30;
     public float rollMult = -45;
     public float pitchMult = 30;
@@ -88,6 +89,8 @@ public class Hero : MonoBehaviour
             if (value < 0)
             { // 3
                 Destroy(this.gameObject);
+                // Tell Main.S to restart the game after a delay
+                Main.S.DelayedRestart(gameRestartDelay);
             }
         }
     }
