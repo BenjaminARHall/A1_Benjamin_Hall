@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour
 {
+   
     static public Hero S; // Singleton
                           // These fields control the movement of the ship
     public float speed = 30;
     public float rollMult = -45;
     public float pitchMult = 30;
     // Ship status information
-    public float shieldLevel = 1;
+    [SerializeField]
+    private float _shieldLevel = 1;
     public bool ____________________________;
     public Bounds bounds;
     void Awake()
@@ -32,32 +34,61 @@ public class Hero : MonoBehaviour
         bounds.center = transform.position;
         //	1								
         //	Keep	the	ship	constrained	to	the	screen	bounds								
-        Vector3	off	=	Utils.ScreenBoundsCheck(bounds,	BoundsTest.onScreen);
+        Vector3 off = Utils.ScreenBoundsCheck(bounds, BoundsTest.onScreen);
         //	2								
-        if	(	off	!=	Vector3.zero	)	{
+        if (off != Vector3.zero)
+        {
             //	3												
-            pos	-=	off;
-            transform.position	=	pos;
+            pos -= off;
+            transform.position = pos;
         }
         // Rotate the ship to make it feel more dynamic // 2
         transform.rotation = Quaternion.Euler(yAxis * pitchMult, xAxis * rollMult, 0);
     }
+    public GameObject lastTriggerGo = null;
     void OnTriggerEnter(Collider other)
     {
-        
-            // Find the tag of other.gameObject or its parent GameObjects
-            GameObject go = Utils.FindTaggedParent(other.gameObject);
-            // If there is a parent with a tag
-            if (go != null)
+
+        // Find the tag of other.gameObject or its parent GameObjects
+        GameObject go = Utils.FindTaggedParent(other.gameObject);
+        // If there is a parent with a tag
+        if (go != null)
+        {
+            // Make sure it's not the same triggering go as last time
+            if (go == lastTriggerGo)
+            { // 2
+                return;
+            }
+            lastTriggerGo = go; // 3
+            if (go.tag == "Enemy")
             {
-                // Announce it
-                print("Triggered: " + go.name);
+                // If the shield was triggered by an enemy
+                // Decrease the level of the shield by 1
+                shieldLevel--;
+                // Destroy the enemy
+                Destroy(go); // 4
             }
             else
             {
-                // Otherwise announce the original other.gameObject
-                print("Triggered: " + other.gameObject.name); // Move this line here!
+                print("Triggered: " + go.name); // Move this line here!
             }
             print("Triggered: " + other.gameObject.name);
+        }
+    }
+    public float shieldLevel
+    {
+        get
+        {
+            return (_shieldLevel); // 1
+        }
+        set
+        {
+            _shieldLevel = Mathf.Min(value, 4); // 2
+                                                // If the shield is going to be set to less than zero
+            if (value < 0)
+            { // 3
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
