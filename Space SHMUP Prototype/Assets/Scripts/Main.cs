@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Main : MonoBehaviour
-{
+{    
     static public Main S;
     static public Dictionary<WeaponType, WeaponDefinition> W_DEFS;
     public GameObject[] prefabEnemies;
@@ -24,6 +24,7 @@ public class Main : MonoBehaviour
 
     void Awake()
     {
+        
         S = this;
         // Set Utils.camBounds
         Utils.SetCameraBounds(this.GetComponent<Camera>());

@@ -605,6 +605,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
+  - {fileID: 7168154038254896140, guid: aab4dd4a5e23b2f438763877b368d237, type: 3}
+  - {fileID: 4328033655950916313, guid: 6611e4ac13a4c6247851dd56107ab250, type: 3}
+  - {fileID: 3495531489172760464, guid: 444019bec7d4caf4c9e35c3a0cddb9cc, type: 3}
+  - {fileID: 4877855526142139227, guid: fbf0413f2407f1346acfe6b3bbf271e4, type: 3}
   - {fileID: 4823256409304193421, guid: 6d865f81599bd204591f00cab59431dc, type: 3}
   enemySpawnPerSecond: 0.5
   enemySpawnPadding: 1.5
@@ -1531,6 +1535,11 @@ PrefabInstance:
     - target: {fileID: 105845822153853817, guid: c3a938ea1e501964f931dbb069d1f1d3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 105845822153853816, guid: c3a938ea1e501964f931dbb069d1f1d3,
+        type: 3}
+      propertyPath: _type
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
