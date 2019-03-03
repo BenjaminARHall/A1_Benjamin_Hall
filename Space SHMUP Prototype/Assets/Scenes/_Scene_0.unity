@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
+  - component: {fileID: 534669906}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -294,6 +295,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534669906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6eddee73eaaee4fa124dc40676ce28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabEnemies: []
+  enemySpawnPerSecond: 0.5
+  enemySpawnPadding: 1.5
+  ________________: 0
+  enemySpawnRate: 0
+--- !u!1 &814216685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7168154038254896140, guid: aab4dd4a5e23b2f438763877b368d237,
+    type: 3}
+  m_PrefabInstance: {fileID: 7168154038411210902}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &814216686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814216685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb74076bee3654540bb00cae8f663c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  fireRate: 0.3
+  health: 10
+  score: 100
+  ________________: 0
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  boundsCenterOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &1889035832
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907087206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -29.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1889035833}
@@ -453,6 +498,9 @@ MonoBehaviour:
   pitchMult: 20
   shieldLevel: 1
   ____________________________: 0
+  bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
 --- !u!1 &1988896798
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7691d1c7a6114634b80a27610becf6f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationsPerSecond: 0.1
+  ________________: 0
+  levelShown: 0
 --- !u!1 &2084342842
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +719,7 @@ PrefabInstance:
     - target: {fileID: 7168154038254896141, guid: aab4dd4a5e23b2f438763877b368d237,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 7168154038254896141, guid: aab4dd4a5e23b2f438763877b368d237,
         type: 3}

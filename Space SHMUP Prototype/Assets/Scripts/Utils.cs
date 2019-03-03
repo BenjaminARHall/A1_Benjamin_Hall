@@ -38,16 +38,16 @@ public class Utils : MonoBehaviour
         // Create an empty Bounds b
         Bounds b = new Bounds(Vector3.zero, Vector3.zero);
         // If this GameObject has a Renderer Component...
-        if (go.renderer != null)
+        if (go.GetComponent<Renderer>() != null)
         {
             // Expand b to contain the Renderer's Bounds
-            b = BoundsUnion(b, go.renderer.bounds);
+            b = BoundsUnion(b, go.GetComponent<Renderer>().bounds);
         }
         // If this GameObject has a Collider Component...
-        if (go.collider != null)
+        if (go.GetComponent<Collider>() != null)
         {
             // Expand b to contain the Collider's Bounds
-            b = BoundsUnion(b, go.collider.bounds);
+            b = BoundsUnion(b, go.GetComponent<Collider>().bounds);
         }
         // Recursively iterate through each child of this gameObject.transform
         foreach (Transform t in go.transform)

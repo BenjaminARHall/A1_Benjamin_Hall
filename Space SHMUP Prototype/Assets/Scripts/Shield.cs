@@ -7,7 +7,7 @@ public class Shield : MonoBehaviour
     public float rotationsPerSecond = 0.1f;
     public bool ________________;
     public int levelShown = 0;
-   public void Update()
+    void Update()
     {
         // Read the current shield level from the Hero Singleton
         int currLevel = Mathf.FloorToInt(Hero.S.shieldLevel); // 1
@@ -15,7 +15,7 @@ public class Shield : MonoBehaviour
         if (levelShown != currLevel)
         {
             levelShown = currLevel;
-            GetComponent<Renderer>()
+            Material mat = this.GetComponent<Renderer>().material;
             // Adjust the texture offset to show different shield level
             mat.mainTextureOffset = new Vector2(0.2f * levelShown, 0); // 2
         }
